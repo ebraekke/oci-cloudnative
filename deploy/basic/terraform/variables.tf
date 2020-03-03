@@ -20,3 +20,7 @@ variable "database_name" {
 variable "ssh_public_key" {
   default = ""
 }
+
+variable "user_ocid" {}
+variable "fingerprint" {}
+variable "private_key_path" {}

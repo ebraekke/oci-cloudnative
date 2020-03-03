@@ -1,5 +1,7 @@
 .DS_Store
 
+*.bat
+
 ## Secrets
 credentials.txt
 credentials.env

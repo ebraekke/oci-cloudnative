@@ -7,12 +7,10 @@ resource "oci_core_security_list" "mushopSecurityList" {
   display_name   = "mushop-node-${random_id.mushop_id.dec}"
   freeform_tags  = "${local.common_tags}"
 
-  egress_security_rules = [
-    {
+  egress_security_rules  {
       protocol    = "6"
       destination = "0.0.0.0/0"
-    }
-  ]
+  }
 
   ingress_security_rules {
     protocol = "6"
@@ -41,12 +39,11 @@ resource "oci_core_security_list" "mushopLBSecurityList" {
   display_name   = "mushop-lb-${random_id.mushop_id.dec}"
   freeform_tags  = "${local.common_tags}"
 
-  egress_security_rules = [
-    {
+  egress_security_rules  {
       protocol    = "6"
       destination = "0.0.0.0/0"
-    }
-  ]
+    
+  }
 
   ingress_security_rules {
     protocol = "6"
